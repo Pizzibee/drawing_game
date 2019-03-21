@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dessinez-c'est gagné !</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+  </head>
+  <body class="bg-light">
+    <div id="signInPage" class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4 centerVertical">
+        <div class="center">
+          <img src="images/logo.png" alt="" width="400" height="200">
+        </div>
+        <div class="alert alert-secondary">
+          <h4 class="center paint-font font-weight-bold">Sign In to the new Paint</h4>
+        </div>
+        <div id="alertSignIn" class="alert alert-danger">
+          <h6 id="messageSignIn" class="center"></h6>
+        </div>
+        <div class="alert alert-dark">
+          <br>
+          <form class="center form-group">
+            <input id="username" class="form-control input-sm" type="text" name="username" placeholder="Username"><br>
+            <input id="password" class="form-control input-sm" type="password" name="password" placeholder="Password"><br>
+            <button id="signIn" class="btn btn-success mt-3" type="button" name="login-button">Se connecter</button>
+          </form>
+        </div>
+        <div class="alert alert-info">
+          <h6 class="center">New to the New Paint ?</h6>
+          <div class="center">
+            <button id="goToSignUp" type="button" name="button" class="btn btn-info">Create an account</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+    <div id="signUpPage" class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4 centerVertical">
+        <div class="center">
+          <img src="images/logo.png" alt="" width="400" height="200">
+        </div>
+        <div class="alert alert-warning">
+          <h4 class="center paint-font font-weight-bold">Sign Up to the new Paint</h4>
+        </div>
+        <div id="alertSignUp" class="alert alert-danger">
+          <h6 id="messageSignUp" class="center"></h6>
+        </div>
+        <div id="successSignUp" class="alert alert-success">
+          <h6 id="messageSuccessSignUp" class="center"></h6>
+        </div>
+        <div class="alert alert-dark">
+          <br>
+          <form class="center form-group">
+            <input id="usernameUp" class="form-control input-sm" type="text" name="username" placeholder="Username"><br>
+            <input id="passwordUp" class="form-control input-sm" type="password" name="password" placeholder="Password"><br>
+            <input id="passwordUp2" class="form-control input-sm" type="password" name="password" placeholder="Password Confimation"><br>
+            <button id="signUp" class="btn btn-success mt-3" type="button" name="login-button">S'inscrire</button>
+          </form>
+        </div>
+        <div class="alert alert-info">
+          <h6 class="center">Already member of the New Paint ?</h6>
+          <div class="center">
+            <button id="goToSignIn" type="button" name="button" class="btn btn-info">Sign In</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+    <div id="choixPage">
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <div class="center centerVertical2">
+            <div class="center">
+              <img src="images/logo.png" alt="" width="400" height="200">
+            </div>
+            <div class="alert alert-secondary">
+              <h1 class="paint-font">Que voulez-vous faire ?</h1>
+            </div>
+            <div class="alert alert-dark">
+              <button id="dessiner" class="btn btn-warning mt-1" type="button" name="dessiner">Je veux dessiner !</button><br>
+              <button id="jouer" class="btn btn-info mt-1" type="button" name="jouer">Je veux jouer !</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="dessinPage">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="center">Dessinez-c'est gagné !</h1>
+          <div class="center">
+            <button class="center btn btn-info btn-lg mb-3" id="clearCanvas" type="button" name="button">Effacer</button>
+          </div>
+          <div class="center">
+            <canvas id="canvas" width="1000" height="500">azer</canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <form class="center form-group">
+            <input id="tagDessin" class="form-control input-sm mt-2" type="text" name="tag-dessin" placeholder="Tags pour le dessin séparés pas des espaces"><br>
+            <button id="saveDessin" class="btn btn-success mt-1" type="button" name="save-dessin">Enregistrer mon dessin</button>
+          </form>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+    </div>
+    <div id="jouerPage">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="center">Devinez-c'est gagné !</h1>
+          <div class="center">
+            <canvas id="canvas2" width="1000" height="500">azer</canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <form class="center form-group">
+            <div id="alertVictoire" class="alert alert-success">
+              <h6 class="center">Bien joué ! Vous avez gagné.</h6>
+            </div>
+            <div id="alertPerte" class="alert alert-danger">
+              <h6 class="center">Pas le bon mot... Veuillez réessayer</h6>
+            </div>
+            <input id="guess" class="form-control input-sm mt-2" type="text" name="tag-dessin" placeholder="Devinez le dessin"><br>
+            <button id="deviner" class="btn btn-success mt-1" type="button" name="guess-dessin">Deviner</button><br>
+            <button id="recommencer" class="btn btn-warning mt-1" type="button" name="guess-dessin">Un autre dessin !</button>
+          </form>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="dessin.js"></script>
+  </body>
+</html>

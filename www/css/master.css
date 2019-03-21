@@ -1,0 +1,23 @@
+.paint-font{
+  font-family:cursive;
+}
+
+.center{
+  text-align: center;
+}
+
+.centerVertical{
+  margin-top: 3%;
+}
+
+.centerVertical2{
+  margin-top: 20%;
+}
+
+#canvas{
+  border:1px solid #000000;
+}
+
+#canvas2{
+  border:1px solid #000000;
+}
